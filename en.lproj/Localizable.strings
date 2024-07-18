@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  VK_task
+
+  Created by Kirill Smirnov on 18.07.2024.
+  
+*/
+
+"Clear" = "Clear";
+"Rain" = "Rain";
+"Storm" = "Storm";
+"Fog" = "Fog";

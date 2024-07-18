@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  VK_task
+
+  Created by Kirill Smirnov on 18.07.2024.
+  
+*/
+
+"Clear" = "Ясно";
+"Rain" = "Дождь";
+"Storm" = "Гроза";
+"Fog" = "Туман";

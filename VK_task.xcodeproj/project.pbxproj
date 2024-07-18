@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		488E17612C490F6600F839AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488E17602C490F6600F839AD /* AppDelegate.swift */; };
 		488E17632C490F6600F839AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488E17622C490F6600F839AD /* SceneDelegate.swift */; };
-		488E17652C490F6600F839AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488E17642C490F6600F839AD /* ViewController.swift */; };
-		488E17682C490F6600F839AD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 488E17672C490F6600F839AD /* Base */; };
+		488E17652C490F6600F839AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488E17642C490F6600F839AD /* MainViewController.swift */; };
 		488E176A2C490F6700F839AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488E17692C490F6700F839AD /* Assets.xcassets */; };
 		488E176D2C490F6700F839AD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 488E176C2C490F6700F839AD /* Base */; };
+		488E17752C49108300F839AD /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488E17742C49108300F839AD /* Weather.swift */; };
+		488E17772C4910A100F839AD /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488E17762C4910A100F839AD /* WeatherCell.swift */; };
+		488E177A2C491CD300F839AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 488E17782C491CD300F839AD /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		488E175D2C490F6600F839AD /* VK_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488E17602C490F6600F839AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488E17622C490F6600F839AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		488E17642C490F6600F839AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		488E17672C490F6600F839AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		488E17642C490F6600F839AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		488E17692C490F6700F839AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		488E176C2C490F6700F839AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		488E176E2C490F6700F839AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		488E17742C49108300F839AD /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		488E17762C4910A100F839AD /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		488E17792C491CD300F839AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		488E177B2C492AEF00F839AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		488E177C2C492AEF00F839AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 		488E17542C490F6600F839AD = {
 			isa = PBXGroup;
 			children = (
+				488E17782C491CD300F839AD /* Localizable.strings */,
 				488E175F2C490F6600F839AD /* VK_task */,
 				488E175E2C490F6600F839AD /* Products */,
 			);
@@ -58,8 +65,9 @@
 			children = (
 				488E17602C490F6600F839AD /* AppDelegate.swift */,
 				488E17622C490F6600F839AD /* SceneDelegate.swift */,
-				488E17642C490F6600F839AD /* ViewController.swift */,
-				488E17662C490F6600F839AD /* Main.storyboard */,
+				488E17642C490F6600F839AD /* MainViewController.swift */,
+				488E17762C4910A100F839AD /* WeatherCell.swift */,
+				488E17742C49108300F839AD /* Weather.swift */,
 				488E17692C490F6700F839AD /* Assets.xcassets */,
 				488E176B2C490F6700F839AD /* LaunchScreen.storyboard */,
 				488E176E2C490F6700F839AD /* Info.plist */,
@@ -109,6 +117,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 488E17542C490F6600F839AD;
 			productRefGroup = 488E175E2C490F6600F839AD /* Products */;
@@ -126,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				488E176A2C490F6700F839AD /* Assets.xcassets in Resources */,
+				488E177A2C491CD300F839AD /* Localizable.strings in Resources */,
 				488E176D2C490F6700F839AD /* Base in Resources */,
-				488E17682C490F6600F839AD /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				488E17652C490F6600F839AD /* ViewController.swift in Sources */,
+				488E17752C49108300F839AD /* Weather.swift in Sources */,
+				488E17652C490F6600F839AD /* MainViewController.swift in Sources */,
+				488E17772C4910A100F839AD /* WeatherCell.swift in Sources */,
 				488E17612C490F6600F839AD /* AppDelegate.swift in Sources */,
 				488E17632C490F6600F839AD /* SceneDelegate.swift in Sources */,
 			);
@@ -147,20 +158,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		488E17662C490F6600F839AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				488E17672C490F6600F839AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		488E176B2C490F6700F839AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				488E176C2C490F6700F839AD /* Base */,
+				488E177B2C492AEF00F839AD /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		488E17782C491CD300F839AD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488E17792C491CD300F839AD /* en */,
+				488E177C2C492AEF00F839AD /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -171,6 +184,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -218,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,6 +248,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -275,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -295,11 +310,12 @@
 				DEVELOPMENT_TEAM = 248WY5BL5B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VK_task/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +339,12 @@
 				DEVELOPMENT_TEAM = 248WY5BL5B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VK_task/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
