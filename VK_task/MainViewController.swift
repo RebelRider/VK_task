@@ -32,6 +32,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         updateWeatherView(animated: false)
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        centerWeatherView()
+    }
+
     private func setupBackgroundImageView() {
         backgroundImageView = UIImageView(frame: view.bounds)
         backgroundImageView.image = UIImage(named: "background")
@@ -82,13 +87,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         weatherImageView.layer.shadowOffset = CGSize(width: 4, height: 4)
         weatherImageView.layer.shadowRadius = 8
         view.addSubview(weatherImageView)
-
-        NSLayoutConstraint.activate([
-            weatherImageView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 20),
-            weatherImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            weatherImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            weatherImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3)
-        ])
     }
     
     private func setupWeatherLabel() {
@@ -102,12 +100,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         weatherLabel.layer.shadowOffset = CGSize(width: 2, height: 2)
         weatherLabel.layer.shadowRadius = 4
         view.addSubview(weatherLabel)
-
-        NSLayoutConstraint.activate([
-            weatherLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor, constant: 20),
-            weatherLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            weatherLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
     }
 
     private func setupWeatherIcon() {
@@ -120,10 +112,22 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         weatherIcon.layer.shadowOffset = CGSize(width: 4, height: 4)
         weatherIcon.layer.shadowRadius = 8
         view.addSubview(weatherIcon)
+    }
 
+    private func centerWeatherView() {
+        let margins = view.layoutMarginsGuide
+        
         NSLayoutConstraint.activate([
+            weatherImageView.centerYAnchor.constraint(equalTo: margins.centerYAnchor, constant: -50),
+            weatherImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            weatherImageView.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 0.8),
+            weatherImageView.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.4),
+            
+            weatherLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor, constant: 20),
+            weatherLabel.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            
             weatherIcon.topAnchor.constraint(equalTo: weatherLabel.bottomAnchor, constant: 20),
-            weatherIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            weatherIcon.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             weatherIcon.widthAnchor.constraint(equalToConstant: 100),
             weatherIcon.heightAnchor.constraint(equalToConstant: 100)
         ])

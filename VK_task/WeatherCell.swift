@@ -50,7 +50,7 @@ class WeatherCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.4),
-            
+
             icon.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 4),
             icon.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             icon.widthAnchor.constraint(equalToConstant: 24),
